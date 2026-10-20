@@ -8,11 +8,19 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        target: [Win64, Android32, Android64]
+        include:
+          - target: Win64
+            os: ubuntu-latest
+          - target: Android32
+            os: ubuntu-latest
+          - target: Android64
+            os: ubuntu-latest
+          - target: iOS
+            os: macos-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
