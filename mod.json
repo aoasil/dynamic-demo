@@ -1,0 +1,18 @@
+{
+  "geode": "4.0.0",
+  "version": "1.0.0",
+  "id": "example.dynamic-demo",
+  "name": "Dynamic Demo",
+  "developer": "Your Name",
+  "description": "A starter Geometry Dash mod built with Geode.",
+  "settings": {
+    "frame-leniency": {
+      "name": "Frame Leniency",
+      "description": "Frame leniency value for the proof of concept.",
+      "type": "int",
+      "default": 1,
+      "min": 0,
+      "max": 12
+    }
+  }
+}
